@@ -2,6 +2,7 @@ let express = require('express');
 let bodyParser = require('body-parser');
 let jwt = require('jsonwebtoken');
 let app = express();
+const PORT = process.env.PORT || 5000
 
 let campoToken = "Token";
 let segredo = '';
