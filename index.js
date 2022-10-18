@@ -314,7 +314,7 @@ app.get('/form/asteroid-alert.js', (req, res) => {
 });
 
 
-app.get('/', (req, res) => res.render('/login/')).listen(5000, () => {
+app.get('/', (req, res) => res.render('/login/')).listen(process.env.PORT || 5000, () => {
     console.log("Aplicação de API subiu na porta 5000");
 });
 
