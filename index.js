@@ -313,7 +313,7 @@ app.get('/form/asteroid-alert.js', (req, res) => {
 });
 
 
-app.listen(5001, () => {
+app.get('/', (req, res) => res.render('views/login')).listen(5000, () => {
     console.log("Aplicação de API subiu na porta 5001");
 });
 
