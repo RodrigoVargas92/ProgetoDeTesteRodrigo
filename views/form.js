@@ -157,7 +157,7 @@ let codigoCliente = 0;
 
         function buscaCliente() {
             return new Promise((resolve, reject) => {
-                fetch('http://localhost:5001/api/v1/clientes/' + codigoCliente,
+                fetch('/api/v1/clientes/' + codigoCliente,
                 {   method : 'get',
                     headers: {"Token": token}})
                     .then(res => res.json())
