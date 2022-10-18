@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Clientes</title>
+    <link rel="stylesheet" href="styleforms.css" />
+	<link rel="stylesheet" href="styleasteroid.css" /> 
+	<script src="asteroid-alert.js"></script>
+    <script src="form.js"></script>
+    
+
+</head>
+
+<body onload="Javascript:carregaCliente()">
+<br><br><br><br>
+    <div class="login">
+        <h1>Cadastro de cliente</h1>
+        <form method="post" action="/api/v1/clientes/">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome" required="required" />
+
+            <label for="telefone">Telefone:</label><br>
+            <input class="formtelefone" type="text" name="telefone" id="telefone" placeholder="telefone" required="required" width="50%" />
+            <br>
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco" placeholder="endereco" required="required" />
+
+            <label for="sexo">Sexo:</label><br>
+            <input type="text" class="formsexo" name="sexo" id="sexo" placeholder="sexo" required="required" />
+            <br>
+            
+            <div id="navegacao" >
+                <table border="0" width="100%">
+                    <tr>
+                        <td>
+                            <input type="button" onclick="Javascript:primeiro()" class="btn btn-1 btn-salvar" value="Primeiro">
+                        </td>
+                        <td>
+                            <input type="button" onclick="Javascript:anterior()" class="btn btn-1 btn-salvar" value="Anterior">
+                        </td>
+                        <td>
+                            <input type="button" onclick="Javascript:proximo()" class="btn btn-1 btn-salvar" value="Próximo">
+                        </td>
+                        <td>
+                            <input type="button" onclick="Javascript:ultimo()" class="btn btn-1 btn-salvar" value="Último">
+                        </td>
+
+                        <td>
+                            <input type="button" onclick="Javascript:adicionar()" class="btn btn-1 btn-salvar" value="Adicionar">
+                        </td>
+                        <td>
+                            <input type="button" onclick="Javascript:modificar()" class="btn btn-1 btn-salvar" value="Alterar">
+                        </td>
+
+                        <td>
+                            <input type="button" onclick="Javascript:eliminaCliente()" class="btn btn-1 btn-salvar" value="Excluir">
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div id="edicao" style="visibility: hidden">
+                <table width="30%" >
+                    <tr>
+                        <td>
+                            <input type="button" class="btn btn-1 btn-salvar" onclick="Javascript:salvar()" value="Salvar" />
+                        </td>
+                        <td>
+                            <input type="button" onclick="Javascript:cancelar()" class="btn btn-1 btn-salvar" value="Cancelar" />
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
