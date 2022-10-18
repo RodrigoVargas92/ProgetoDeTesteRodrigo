@@ -13,11 +13,11 @@ const { json } = require('body-parser');
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname));
-app.use(express.static(__dirname + '\\views\\form.html'));
-app.use(express.static(__dirname + '\\views\\styleforms.css'));
-app.use(express.static(__dirname + '\\views\\form.js'));
+app.use(express.static(__dirname + '/views/form.html'));
+app.use(express.static(__dirname + '/views/styleforms.css'));
+app.use(express.static(__dirname + '/views/form.js'));
 console.log(__dirname);
-app.use(express.static(__dirname + '\\views\\login.html'));
+app.use(express.static(__dirname + '/views/login.html'));
 app.use(express.static(__dirname + '/views/stylelogin.css'));
 
 let router = express.Router();
@@ -79,7 +79,7 @@ clientes.push(cliente5);
 
 app.get('/form/', (req, res) => {
     
-    res.sendFile(__dirname + '\\views\\form.html');
+    res.sendFile(__dirname + '/views/form.html');
 });
 
 function validaToken(requisicao) {
@@ -297,20 +297,20 @@ app.get("/user/getUserToken/", (requisicao, resposta) => {
 });
 
 app.get('/form/styleforms.css', (req, res) => {
-    res.sendFile(__dirname + '\\views\\styleforms.css'); 
+    res.sendFile(__dirname + '/views/styleforms.css'); 
 });
 
 app.get('/form/styleasteroid.css', (req, res) => {
-    res.sendFile(__dirname + '\\views\\styleasteroid.css'); 
+    res.sendFile(__dirname + '/views/styleasteroid.css'); 
 });
 
 
 app.get('/form/form.js', (req, res) => {
-    res.sendFile(__dirname + '\\views\\form.js'); 
+    res.sendFile(__dirname + '/views/form.js'); 
 });
 
 app.get('/form/asteroid-alert.js', (req, res) => {
-    res.sendFile(__dirname + '\\views\\asteroid-alert.js'); 
+    res.sendFile(__dirname + '/views/asteroid-alert.js'); 
 });
 
 
