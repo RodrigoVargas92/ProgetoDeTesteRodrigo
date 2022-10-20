@@ -77,7 +77,7 @@ let cliente5 = {id: 5,
 
 clientes.push(cliente5); 
 app.get('/', (req, res) => {
-    res.send("<script>window.document.location='https://univillecli.herokuapp.com//login/'</script>");
+    res.send("<script>window.document.location='https://univillecli.herokuapp.com/login/'</script>");
 });
 
 app.get('/form/', (req, res) => {
