@@ -1,5 +1,5 @@
 let codigoCliente = 0;
-        let ultimocCliente = 0;
+        let ultimocCliente = 5;
         let primeiroCliente = 1;
         let codigoAnterior = 0;
         let codigoPosterior = 0;
