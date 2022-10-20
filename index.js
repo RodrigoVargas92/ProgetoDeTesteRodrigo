@@ -5,7 +5,7 @@ let app = express();
 const PORT = process.env.PORT || 5000
 
 let campoToken = "Token";
-let segredo = '';
+let segredo = ''; 
 
 
 const { application } = require('express');
