@@ -76,6 +76,9 @@ let cliente5 = {id: 5,
     next: null};
 
 clientes.push(cliente5); 
+app.get('/', (req, res) => {
+    resposta.send("<script>window.document.location='/login/'</script>");
+});
 
 app.get('/form/', (req, res) => {
     
