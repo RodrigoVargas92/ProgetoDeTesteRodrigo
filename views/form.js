@@ -7,7 +7,7 @@ let codigoCliente = 0;
         let novoCliente = false;
         let token = '';
 
-        function buscaTokenUsuario() {
+        function inciaAplicacao() {
             fetch('/user/getUserToken/', {
                 method: 'get',
                 headers: {"Token": token}              
@@ -15,11 +15,12 @@ let codigoCliente = 0;
             }).then((res) => res.json())
                 .then((data) =>  {
                     token = data.token;
+                    primeiro();
                   
                 })
                 .catch((err) => console.log(err));
         }
-        buscaTokenUsuario();
+        
 
         function primeiro() {
             buscaPrimeiroCliente();
