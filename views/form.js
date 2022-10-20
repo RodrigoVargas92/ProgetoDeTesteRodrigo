@@ -124,7 +124,7 @@ let codigoCliente = 0;
         //buscaUltimoCodigoCliente();
 
         function buscaPrimeiroCliente() {
-            
+            alert('buscaPrimeiroCliente ' + token);
             fetch('/api/v1/clientes/primeiro/', {
                 method: 'get',
                 headers: {"Token": token}               
@@ -157,6 +157,7 @@ let codigoCliente = 0;
 
         function buscaCliente() {
             return new Promise((resolve, reject) => {
+                alert('buscaCliente ' + token);
                 fetch('/api/v1/clientes/' + codigoCliente,
                 {   method : 'get',
                     headers: {"Token": token}})
@@ -170,6 +171,7 @@ let codigoCliente = 0;
             });
         }
         function carregaCliente() {
+            alert('carregaCliente ' + token);
             console.log('carregaCliente codigoCliente ' + codigoCliente);
             if (codigoCliente == 0) {
                 buscaPrimeiroCliente();
